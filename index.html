@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090c12"><meta name="description" content="Fake GPS — выбирай тестовые локации, сохраняй точки и управляй сценариями геолокации.">
+  <title>Fake GPS — твоя точка, твои правила</title><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="header">
+    <a class="logo" href="#home" aria-label="Fake GPS"><span class="logo-symbol">⌖</span>fake<span>gps</span></a>
+    <nav class="nav" id="nav"><a href="#features">Возможности</a><a href="#demo">Демо</a><a href="#how">Как работает</a><a href="#faq">FAQ</a></nav>
+    <a class="btn btn-outline header-cta" href="#demo">Попробовать демо <b>↗</b></a>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><i></i><i></i></button>
+  </header>
+
+  <main>
+    <section class="hero wrap" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><i class="live-dot"></i> ANDROID PROJECT <span></span> В РАЗРАБОТКЕ</div>
+        <h1>Твоя точка.<br><em>Твои правила.</em></h1>
+        <p class="lead">Выбирай место на карте, сохраняй любимые точки и управляй тестовыми сценариями геолокации — в одном понятном интерфейсе.</p>
+        <div class="hero-buttons"><a class="btn btn-primary" href="#demo">Открыть демо <b>↗</b></a><a class="link-btn" href="#features">Изучить возможности <span>↓</span></a></div>
+        <div class="trust"><span class="trust-icon">✳</span><div><b>Просто. Наглядно. Под контролем.</b><small>Концепция интерфейса Fake GPS</small></div></div>
+      </div>
+      <div class="hero-art reveal" id="heroArt">
+        <div class="aura"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="float-label label-top"><i></i> Точка выбрана</div><div class="float-label label-bottom">⌖ &nbsp;46.4825° N · 30.7233° E</div>
+        <div class="phone-wrap" id="phoneWrap"><div class="phone"><div class="phone-screen">
+          <div class="notch"></div><div class="status"><span>9:41</span><span>●●● ▰</span></div>
+          <div class="app-title"><div><small>ТВОЯ ЛОКАЦИЯ</small><b>Выбери точку</b></div><span>F</span></div>
+          <div class="phone-map"><div class="map-grid"></div><svg viewBox="0 0 300 260" preserveAspectRatio="none"><path d="M-10 48 Q55 83 115 40 T315 70 M-20 190 Q55 150 120 194 T320 180 M65 -15 Q105 60 85 112 T165 275 M245 -20 Q208 64 266 115 T230 280"/><path class="bright-road" d="M-10 120 Q60 93 145 128 T315 130"/></svg><span class="map-area area-one">PRIMORSKY</span><span class="map-area area-two">CENTER</span><div class="pin"><i></i></div><div class="zoom">＋<hr>−</div></div>
+          <div class="chosen"><span class="chosen-icon">⌖</span><div><small>ВЫБРАННАЯ ТОЧКА</small><b>Одесса, Украина</b></div><strong>✓</strong></div>
+          <div class="coords"><span>Широта<b>46.4825</b></span><span>Долгота<b>30.7233</b></span></div><div class="phone-action">Выбрать точку <b>→</b></div><div class="phone-dots"><i></i><i></i><i></i></div>
+        </div></div>
+      </div>
+      <div class="scroll-hint"><span></span> ЛИСТАЙ НИЖЕ</div>
+    </section>
+
+    <div class="ticker"><div class="ticker-track"><span>ВЫБИРАЙ ТОЧКУ</span>✳<span>СОХРАНЯЙ МЕСТА</span>✳<span>ТЕСТИРУЙ СЦЕНАРИИ</span>✳<span>УПРАВЛЯЙ ПРОСТО</span>✳<span>ВЫБИРАЙ ТОЧКУ</span>✳<span>СОХРАНЯЙ МЕСТА</span>✳</div></div>
+
+    <section class="section wrap" id="features">
+      <div class="section-heading reveal"><div class="eyebrow">01 <span></span> ВОЗМОЖНОСТИ</div><h2>Всё важное — <em>под рукой.</em></h2><p>Продуманный набор инструментов для удобной работы с тестовыми локациями.</p></div>
+      <div class="features-grid">
+        <article class="feature-card feature-wide reveal"><div class="card-meta">01 / MAP <span class="feature-icon">⌖</span></div><div class="mini-map"><div class="mini-map-streets"></div><div class="mini-target"><i></i></div><span>46.4825, 30.7233</span></div><h3>Точка на карте</h3><p>Выбирай нужную локацию и смотри координаты в удобном формате.</p></article>
+        <article class="feature-card reveal"><div class="card-meta">02 / SAVED <span class="feature-icon">☆</span></div><div class="saved-list"><div><i>⌖</i><span><b>Дом</b><small>Избранное место</small></span><strong>•••</strong></div><div><i class="purple">⌖</i><span><b>Работа</b><small>Избранное место</small></span><strong>•••</strong></div><div><i class="blue">⌖</i><span><b>Центр</b><small>Избранное место</small></span><strong>•••</strong></div></div><h3>Любимые места</h3><p>Собирай важные точки в одном списке, чтобы быстро находить их снова.</p></article>
+        <article class="feature-card reveal"><div class="card-meta">03 / CONTROL <span class="feature-icon">◈</span></div><div class="control-art"><div class="control-ring">GPS</div><div class="control-line"></div><span><i></i> Режим готов</span></div><h3>Понятное управление</h3><p>Минимум лишнего: важные действия и состояние интерфейса всегда на виду.</p></article>
+      </div>
+    </section>
+
+    <section class="demo-section" id="demo"><div class="wrap demo-layout">
+      <div class="demo-copy reveal"><div class="eyebrow">02 <span></span> ИНТЕРАКТИВНОЕ ДЕМО</div><h2>Почувствуй,<br><em>как это просто.</em></h2><p>Выбирай город или просто нажми в любое место на карте Украины — маркер встанет точно туда, а координаты обновятся.</p>
+        <div class="city-buttons" aria-label="Быстрый выбор города"><button class="city active" data-city="odesa">Одесса <b>↗</b></button><button class="city" data-city="kyiv">Киев <b>↗</b></button><button class="city" data-city="lviv">Львов <b>↗</b></button><button class="city" data-city="kharkiv">Харьков <b>↗</b></button><button class="city" data-city="dnipro">Днепр <b>↗</b></button></div>
+        <div class="demo-disclaimer"><span>i</span> Демо показывает выбор точки на карте сайта. Оно не меняет GPS телефона и не подключено к Google Maps.</div>
+      </div>
+      <div class="demo-card reveal"><div class="demo-top"><span><i></i> ПРЕДПРОСМОТР ЛОКАЦИИ</span><b>•••</b></div>
+        <div class="demo-map map-real-wrap"><div id="ukraineMap" class="ukraine-map" role="application" aria-label="Интерактивная карта Украины"><div class="map-loading"><span class="map-loader"></span><b>Загружаем карту Украины…</b><small>Для карты требуется подключение к интернету</small></div></div><div class="map-chip"><span></span> УКРАИНА · LIVE MAP</div><button class="map-reset" id="resetMap" type="button">⌖ Обзор Украины</button></div>
+        <div class="demo-data"><div><small>ВЫБРАННЫЙ ГОРОД</small><b id="cityName">Одесса, Украина</b></div><div class="demo-coords"><span id="lat">46.4825° N</span><span id="lon">30.7233° E</span></div></div>
+        <div class="demo-bottom"><span><i></i> Нажми на карту, чтобы поставить точку</span><span class="map-data-state" id="mapState">Координаты обновляются автоматически</span></div>
+      </div>
+    </div></section>
+
+    <section class="section wrap" id="how"><div class="section-heading reveal"><div class="eyebrow">03 <span></span> КАК ЭТО РАБОТАЕТ</div><h2>Три шага. <em>И готово.</em></h2><p>Простой сценарий, который легко понять с первого запуска.</p></div>
+      <div class="steps"><article class="step reveal"><small>01</small><div>⌕</div><h3>Найди место</h3><p>Выбери область на карте или найди нужную точку.</p></article><article class="step reveal"><small>02</small><div>⌖</div><h3>Проверь координаты</h3><p>Убедись, что выбрана нужная локация и сохрани её.</p></article><article class="step reveal"><small>03</small><div>✦</div><h3>Используй для тестов</h3><p>Запускай разрешённые тестовые сценарии на своём устройстве.</p></article></div>
+    </section>
+
+    <section class="manifesto wrap reveal"><div class="manifesto-glow"></div><div class="manifesto-text"><div class="eyebrow">FAKE GPS / НАШ ПОДХОД</div><h2>Меньше сложностей.<br><em>Больше контроля.</em></h2><p>Мы создаём понятный инструмент для тестирования приложений и изучения сценариев геолокации. Используй его ответственно и соблюдай правила сервисов.</p><a class="btn btn-primary" href="#faq">Узнать больше <b>↗</b></a></div><div class="stamp"><small>YOUR</small><b>PIN</b><small>YOUR RULES</small><i>✳</i></div></section>
+
+    <section class="section wrap faq-section" id="faq"><div class="faq-intro reveal"><div class="eyebrow">04 <span></span> FAQ</div><h2>Есть вопросы?<br><em>Разберёмся.</em></h2><p>Коротко ответили на главное о проекте.</p></div><div class="faq-list reveal">
+      <article class="faq-item open"><button class="faq-question" aria-expanded="true">Fake GPS уже можно скачать?<b>−</b></button><div class="faq-answer"><p>Проект находится в разработке. Когда Android-приложение будет собрано и протестировано, здесь можно разместить настоящую ссылку на APK.</p></div></article>
+      <article class="faq-item"><button class="faq-question" aria-expanded="false">Демо на сайте меняет моё местоположение?<b>＋</b></button><div class="faq-answer"><p>Нет. Это только интерактивный макет интерфейса. Он не запрашивает доступ к геолокации и не меняет системные настройки телефона.</p></div></article>
+      <article class="faq-item"><button class="faq-question" aria-expanded="false">Для чего предназначено приложение?<b>＋</b></button><div class="faq-answer"><p>Основной сценарий — тестирование собственных приложений и проверка интерфейсов, зависящих от геолокации. Соблюдай правила используемых сервисов и местные законы.</p></div></article>
+      <article class="faq-item"><button class="faq-question" aria-expanded="false">Будет ли версия для Android?<b>＋</b></button><div class="faq-answer"><p>Да, сейчас мы работаем над Android-версией. Информация о совместимости и установке появится после проверки на устройствах.</p></div></article>
+    </div></section>
+
+    <section class="final-cta wrap reveal"><div class="cta-glow"></div><div class="eyebrow">СЛЕДИ ЗА ЗАПУСКОМ</div><h2>Твоя следующая точка<br><em>начинается здесь.</em></h2><p>Fake GPS — проект, который создаётся с нуля. Скоро здесь появятся новости и ссылка на готовую версию.</p><a class="btn btn-primary" href="#home">Вернуться наверх <b>↑</b></a></section>
+  </main>
+  <footer class="footer wrap"><a class="logo" href="#home"><span class="logo-symbol">⌖</span>fake<span>gps</span></a><small>© 2026 Fake GPS. Независимый проект в разработке.</small><a href="#home">НАВЕРХ ↑</a></footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="script.js"></script>
+</body></html>
